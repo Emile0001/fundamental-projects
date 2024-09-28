@@ -9,11 +9,13 @@ const App = () => {
     const [birthdays, setBirthdays] = useState(data);
 
     return (
-        <article className="container">
-            <Title birthdays={birthdays.length}></Title>
-            <Birthdays birthdays={birthdays}></Birthdays>
-            <ClearBtn setBirthdays={setBirthdays}></ClearBtn>
-        </article>
+        <main>
+            <article className="container">
+                <Title birthdays={birthdays.length}></Title>
+                <Birthdays birthdays={birthdays}></Birthdays>
+                <ClearBtn setBirthdays={setBirthdays}></ClearBtn>
+            </article>
+        </main>
     );
 };
 export default App;

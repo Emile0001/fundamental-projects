@@ -2,7 +2,7 @@ import { Birthday } from "./Birthday";
 
 export const Birthdays = ({ birthdays }) => {
     return (
-        <>
+        <section>
             {birthdays.map((birthday) => {
                 const { id } = birthday;
                 return (
@@ -11,6 +11,6 @@ export const Birthdays = ({ birthdays }) => {
                     </div>
                 );
             })}
-        </>
+        </section>
     );
 };

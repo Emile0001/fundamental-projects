@@ -3,7 +3,11 @@ export const ClearBtn = ({ setBirthdays }) => {
         setBirthdays([]);
     };
     return (
-        <button type="button" className="btn" onClick={clearBirthdays}>
+        <button
+            type="button"
+            className="btn btn-block"
+            onClick={clearBirthdays}
+        >
             Clear All
         </button>
     );
