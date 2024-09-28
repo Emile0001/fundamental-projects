@@ -12,7 +12,7 @@ const App = () => {
         <article className="container">
             <Title birthdays={birthdays.length}></Title>
             <Birthdays birthdays={birthdays}></Birthdays>
-            <ClearBtn></ClearBtn>
+            <ClearBtn setBirthdays={setBirthdays}></ClearBtn>
         </article>
     );
 };
