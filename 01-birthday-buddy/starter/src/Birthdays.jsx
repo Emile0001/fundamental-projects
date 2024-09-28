@@ -1,13 +1,16 @@
 import { Birthday } from "./Birthday";
-import data from "./data";
 
-export const Birthdays = () => {
+export const Birthdays = ({ birthdays }) => {
     return (
-        <div>
-            Birthdays component
-            <div>
-                <Birthday></Birthday>
-            </div>
-        </div>
+        <>
+            {birthdays.map((birthday) => {
+                const { id } = birthday;
+                return (
+                    <div key={id}>
+                        <Birthday {...birthday}></Birthday>
+                    </div>
+                );
+            })}
+        </>
     );
 };

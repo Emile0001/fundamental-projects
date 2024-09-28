@@ -1,3 +1,3 @@
-export const Title = () => {
-    return <h1>? Birthdays Today</h1>;
+export const Title = ({ birthdays }) => {
+    return <h1>{birthdays} Birthdays Today</h1>;
 };
