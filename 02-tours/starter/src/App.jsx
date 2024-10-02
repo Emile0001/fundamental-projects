@@ -27,24 +27,24 @@ const App = () => {
     }, []);
 
     return (
-        <section>
+        <main>
             <ul>
                 {tours.map((tour) => {
                     const { id, name, info, image, price } = tour;
                     return (
-                        <li key={id}>
+                        <li key={id} className="single-tour">
                             <img src={image} />
-                            <h4>{name}</h4>
-                            <p>{info}</p>
-                            <p>{price}</p>
-                            <button type="button" className="btn">
+                            <h5>{name}</h5>
+                            <p className="tour-info">{info}</p>
+                            <p className="tour-price">{price}</p>
+                            <button type="button" className="btn btn-hipster">
                                 Not interested
                             </button>
                         </li>
                     );
                 })}
             </ul>
-        </section>
+        </main>
     );
 };
 export default App;
