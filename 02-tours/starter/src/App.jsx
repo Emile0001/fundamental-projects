@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Tours } from "./components/Tours";
-import { Tour } from "./components/Tour";
 
 const url = "https://www.course-api.com/react-tours-project";
 
@@ -28,9 +27,20 @@ const App = () => {
         setTours(filteredTours);
     };
 
+    const refreshTours = () => {
+        fetchTours();
+    };
+    if (tours.length === 0) {
+        return (
+            <section>
+                <button type="button" onClick={refreshTours}>
+                    refresh tours
+                </button>
+            </section>
+        );
+    }
     return (
         <main>
-            <h1>Tours</h1>
             <Tours
                 tours={tours}
                 removeTour={removeTour}
