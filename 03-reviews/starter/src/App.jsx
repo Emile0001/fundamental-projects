@@ -1,4 +1,14 @@
+import reviews from "./data";
+
 const App = () => {
-    return <h2>Reviews Starter</h2>;
+    return (
+        <main>
+            <h1>
+                {reviews.filter((review) => {
+                    review.id === 1;
+                })}
+            </h1>
+        </main>
+    );
 };
 export default App;
